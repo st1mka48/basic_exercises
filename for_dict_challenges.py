@@ -12,7 +12,18 @@ students = [
     {'first_name': 'Маша'},
     {'first_name': 'Петя'},
 ]
-# ???
+words = [student['first_name'] for student in students]
+word_count = {}
+
+for word in words:
+    if word in word_count:
+        word_count[word] += 1
+    else:
+        word_count[word] = 1
+
+for name, count in word_count.items():
+    print(f"{name}: {count}")
+
 
 
 # Задание 2
