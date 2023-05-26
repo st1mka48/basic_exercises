@@ -22,14 +22,20 @@ print(f'Гласных букв {count}')
 
 # Вывести количество слов в предложении
 sentence = 'Мы приехали в гости'
-# ???
+print(len(sentence.split()))
 
 
 # Вывести первую букву каждого слова на отдельной строке
 sentence = 'Мы приехали в гости'
-# ???
-
+for i in sentence.split():
+    print(i[:1])
+print('-' * 40)
 
 # Вывести усреднённую длину слова в предложении
 sentence = 'Мы приехали в гости'
-# ???
+avg = 0
+for j in sentence.split():
+    avg += len(j)
+print(avg / len(sentence.split()))
+
+
