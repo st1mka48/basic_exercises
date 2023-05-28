@@ -2,7 +2,7 @@
 # Необходимо вывести имена всех учеников из списка с новой строки
 
 names = ['Оля', 'Петя', 'Вася', 'Маша']
-# ???
+
 for n in names:
     print(n)
 
@@ -13,7 +13,6 @@ for n in names:
 # Петя: 4
 
 names = ['Оля', 'Петя', 'Вася', 'Маша']
-# ???
 for n in names:
     print(n, len(n))
 
@@ -39,17 +38,18 @@ for n in names:
 # Всего 2 группы.
 # Группа 1: 2 ученика.
 # Группа 2: 4 ученика.
-
+#
 groups = [
     ['Вася', 'Маша'],
     ['Вася', 'Маша', 'Саша', 'Женя'],
     ['Оля', 'Петя', 'Гриша'],
 ]
-t = 0
+
 print(f'Всего {len(groups)} группы')
-for n in groups:
-    t += 1
-    print(f'Группа {t}: {len(n)} ученика')
+g = enumerate(groups,1)
+for i, n in g:
+    print(f'Группа {i}: {len(n)} ученика')
+
 
 
 
@@ -64,8 +64,7 @@ groups = [
     ['Оля', 'Петя', 'Гриша'],
     ['Вася', 'Маша', 'Саша', 'Женя'],
 ]
-t = 0
-for i in range(len(groups)):
-    t += 1
-    print(f'Группа {t}:',*groups[i])
+gr = enumerate(groups,1)
+for i, v in gr:
+    print(f'Группа {i}:', *v)
 
